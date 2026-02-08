@@ -12,27 +12,28 @@
 This repository contains an implementation of a simple Inverted Index.
 
 ## 1) Overview
-> What is an Inverted Index?
-
 Previously, we explored the following questions about [incidence matrices](https://github.com/kaonashi-noface/incidence-matrix?tab=readme-ov-file#1-overview):
 * what is it?
 * why is it important?
 * how to create one?
 
-We also alluded to the concept of a `postings list` covering one of its flaws - ineffective memory management.
+We also alluded to the concept of a `postings list` by covering one of the incidence matrix's flaws - ineffective memory management.
 
-A `postings list` is a similar to a row in an incidence matrix - it marks all documents that contain a given term.
+A `postings list` is similar to a row in an incidence matrix - it marks all documents that contain a given term.
 
 The difference between:
 1) a row associated with a term in an incidence matrix
 2) a postings list associated with a term in an inverted index
 
-is that a postings list only tracks the documents that contain the term of interest. On the other hand, an inverted index tracks the absence (`0`s in a cell) of a term.
+is that a postings list only tracks the documents that contain the term of interest. On the other hand, an incidence matrix tracks everything - including the absence of a term (`0`s in a cell).
 
 For example, the following incidence matrix can be represented as an inverted index:
 ![Incidence Matrix Inverted Matrix Conversion](rsc/img/inverted-index_001.png)
 
 `"Caesar": 1 -> 2 -> 3` represents a postings list where the term `Caesar` was found in documents 1, 2 and 3.
+
+> What is an Inverted Index?
+
 
 ## 2) Terminologies
 TODO
